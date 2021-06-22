@@ -71,6 +71,7 @@ export default function App() {
   );
 }
 
+// bug: table disappears when texture is chosen
 // make texture transparent or something on hover
 // different textures on different sides of the table top
 // rounded and flattened corners on the table top
