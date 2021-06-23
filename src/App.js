@@ -28,8 +28,7 @@ export default function App() {
           ]
         : [0, 3, -12]
     },
-    to: { position },
-    reset: true
+    to: { position }
   });
 
   return (
@@ -37,12 +36,6 @@ export default function App() {
       {textures.map((texture, i) => (
         <button key={i} onClick={() => {
           setTexture(texture)
-          // the position otherwise returns to the first one
-          setPosition([
-            cameraRef.current.position.x,
-            cameraRef.current.position.y,
-            cameraRef.current.position.z,
-          ])
         }}>
           Textur {i + 1}
         </button>
@@ -79,7 +72,6 @@ export default function App() {
   );
 }
 
-// bug: table disappears when texture is chosen
 // make texture transparent or something on hover
 // different textures on different sides of the table top
 // rounded and flattened corners on the table top
