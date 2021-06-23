@@ -16,8 +16,10 @@ const TableTop = ({ texture }) => {
     `${texture}_AmbientOcclusion.jpg`
   ]);
   return (
-    <mesh position={[0, 0, 0]}>
+    <mesh>
       <boxGeometry args={[10, 1, 5]} />
+      <meshStandardMaterial color='saddlebrown' attachArray='material' />
+      <meshStandardMaterial color='saddlebrown' attachArray='material' />
       <meshStandardMaterial
         map={colorMap}
         displacementMap={displacementMap}
@@ -25,7 +27,11 @@ const TableTop = ({ texture }) => {
         roughnessMap={roughnessMap}
         aoMap={aoMap}
         displacementScale={0}
+        attachArray='material'
       />
+      <meshStandardMaterial color='saddlebrown' attachArray='material' />
+      <meshStandardMaterial color='saddlebrown' attachArray='material' />
+      <meshStandardMaterial color='saddlebrown' attachArray='material' />
     </mesh>
   );
 };

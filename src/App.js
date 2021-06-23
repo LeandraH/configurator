@@ -58,7 +58,8 @@ export default function App() {
       <Canvas>
         <Suspense fallback={null}>
           <ambientLight />
-          <directionalLight />
+          <directionalLight position={[3, 3, 3]} intensity={1} />
+          <directionalLight position={[-3, -3, 3]} intensity={1} />
           <TableTop texture={texture} />
           <AnimatedCamera
             makeDefault
@@ -72,8 +73,8 @@ export default function App() {
   );
 }
 
+// back to: try to get the move smooth
 // make texture transparent or something on hover
-// different textures on different sides of the table top
 // rounded and flattened corners on the table top
 // add a zoom value
 // change sizes
