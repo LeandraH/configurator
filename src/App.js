@@ -35,7 +35,15 @@ export default function App() {
   return (
     <div className="container">
       {textures.map((texture, i) => (
-        <button key={i} onClick={() => setTexture(texture)}>
+        <button key={i} onClick={() => {
+          setTexture(texture)
+          // the position otherwise returns to the first one
+          setPosition([
+            cameraRef.current.position.x,
+            cameraRef.current.position.y,
+            cameraRef.current.position.z,
+          ])
+        }}>
           Textur {i + 1}
         </button>
       ))}
